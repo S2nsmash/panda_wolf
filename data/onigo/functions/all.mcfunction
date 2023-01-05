@@ -10,6 +10,7 @@ execute if score 準備中 gamefile matches 1..
 
 ## timer 
 
+## test
 
 ## 終了判定
 execute if score 試合中 gamefile matches 1.. run function onigo:end/1end
