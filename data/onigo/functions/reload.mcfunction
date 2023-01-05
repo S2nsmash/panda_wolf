@@ -14,7 +14,7 @@ scoreboard players set 試合中 gamefile 0
 
 
 ## 役職確認リセット
-scoreboard players set 人狼 position 0
+scoreboard players set 人狼 position 0 
 scoreboard players set 狂人 position 0
 scoreboard players set 村人 position 0
 
