@@ -4,17 +4,22 @@ say Reloaded!
 scoreboard objectives add death deathCount
 scoreboard objectives add position dummy "役職"
 scoreboard objectives add gamefile dummy "ゲーム進行状況"
+scoreboard objectives add timer dummy
+scoreboard objectives add showtimer dummy "時計"
 
 ## 進行状況確認
 scoreboard players set 準備中 gamefile 1
+scoreboard players set 試合前 gamefile 0
+scoreboard players set 試合中 gamefile 0
+
 
 ## 役職確認リセット
 scoreboard players set 人狼 position 0
 scoreboard players set 狂人 position 0
 scoreboard players set 村人 position 0
 
-## tag付与
-tag @a add player
+## timerscoreリセット
+scoreboard players set tick timer 0
 
 ## 落下ダメ無し
 gamerule fallDamage false
@@ -24,6 +29,7 @@ gamerule showDeathMessages false
 
 ## mob生成無し
 gamerule doMobSpawning false
+
 
 
 

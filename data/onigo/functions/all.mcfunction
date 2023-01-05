@@ -1,16 +1,17 @@
 
 ## デスカウントリセット処理
+execute as @a[scores={death=1..}] run function onigo:game/count
 execute as @a[scores={death=1..}] run team join player
 execute as @a[scores={death=1..}] run scoreboard players set @s death 0
 
-## 準備中に参加者カウントをする
-execute if score 準備中 gamefile matches 1..
-
-
-
 ## timer 
+execute if score 試合前 gamefile matches 1.. run function onigo:pregame/1pretimer
+execute if score 試合前 gamefile matches 1.. run function onigo:pregame/prestart
+ 
+execute if score 試合中 gamefile matches 1.. run function onigo:game/ingametimer
 
-## test
+
+
 
 ## 終了判定
 execute if score 試合中 gamefile matches 1.. run function onigo:end/1end
